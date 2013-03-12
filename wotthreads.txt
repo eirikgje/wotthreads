@@ -2,7 +2,7 @@
 #Note: 
 #ADD Book Chapter Charname - will deactivate the current active thread IN THE PREVIOUS CHAPTER - thus, if you want to add a thread in the middle of a chapter, you should deactivate the active thread explicitly in that chapter first.
 #REMOVE Book Chapter Charname. The chapter should be the last chapter in which this thread appears.
-#MERGE Book Chapter Charname1 Charname2 - If Charname2 doesn't exist from before, will add a new thread that is together with Charname1. In that case, charname2 will be set as the active thread
+#MERGE Book Chapter Charname1 Charname2 - If Charname2 doesn't exist from before, will add a new thread that is together with Charname1. In that case, charname2 will be set as the active thread. If two threads are already merged, a third thread only needs to be merged with one of them.
 #SPLIT Book Chapter Charname1 Charname2  - If Charname2 doesn't exist from before, will create a thread that splits off Charname1. In that case, charname2 will be set as the active thread
 #EVENT Book Chapter Significance Description - Mostly for fluff. Significance can be either 'major', 'minor' or just 'summary', if you want to add a chapter summary but nothing very interesting happened.
 #ACTIVATE Book Chapter Charname - Makes Charname's thread 'active' - i.e. from this chapter on, we follow this character. Then, when focus is switched to another character, DEACTIVATE is called automatically. These commands are thus NOT for when a character dies or vanishes from the story completely. When a thread is ADDed, it is automatically ACTIVATEd. If focus switches to another character in the middle of a chapter, you should call DEACTIVATE manually, since the ACTIVATE command otherwise assumes that the chapter in which it is called starts with the newly activated thread.
@@ -68,6 +68,7 @@ EVENT 1 29 Summary "Perrin, Egwene and Elyas are being chased by ravens. They es
 EVENT 1 30 Summary "Whitecloaks enter the stedding. Perrin kills two of them and Perrin and Egwene are captured."
 EVENT 1 30 Minor "Byar is introduced"
 EVENT 1 30 Minor "Hopper is killed by Whitecloaks"
+EVENT 1 30 Minor "Perrin and Egwene captured by Whitecloaks"
 ACTIVATE 1 31 "Rand al'Thor"
 EVENT 1 31 Summary "Mat grows more suspicious. Rand and Mat travel towards Caemlyn, and lodge at various places. They meet Else at one of the farms."
 EVENT 1 32 Summary "Rand and Mat arrive in Four Kings. They play and juggle at a suspicious tavern. The owner wants to steal their stuff, but a Darkfriend comes first. Lightning strikes the tavern just as they are about to be captured by the Darkfriend, and they escape."
@@ -82,9 +83,12 @@ EVENT 1 37 Summary "Nynaeve, Moiraine and Lan finds the Whitecloak camp where Pe
 ACTIVATE 1 38 "Perrin Aybara"
 EVENT 1 38 Summary "Perrin is almost killed by Byar but is rescued by Lan. Perrin, Egwene and Lan sneak out while lightning strikes. Nynaeve discovers that Perrins eyes are yellow, and Moiraine knows what it means. She tells them Elyas was once a Warder."
 EVENT 1 38 Minor "First mention of Perrin's yellow eyes"
+EVENT 1 38 Minor "Perrin and Egwene rescued by Moiraine, Nynaeve and Lan"
+MERGE 1 38 "Perrin Aybara" "Nynaeve al'Meara"
 ACTIVATE 1 39 "Rand al'Thor"
 EVENT 1 39 Summary "Rand goes to see the procession of Logain through Caemlyn, while Mat sulks in his room. A beggar who has been asking for him sees him and starts pursuing him. Rand escapes and sees Logain on top of a wall before falling down when a voice startles him."
 EVENT 1 39 Minor "Logain is officially introduced"
+MERGE 1 40 "Rand al'Thor" "Perrin Aybara"
 EVENT 1 40 Summary "Rand meets Elayne, Gawyn and Galad in the palace gardens. He is taken to Morgase, who lets him go, but not before Elaida Foretells that he will be at the heart of pain and division."
 EVENT 1 40 Minor "Elayne is officially introduced"
 EVENT 1 40 Minor "Gawyn is officially introduced"
