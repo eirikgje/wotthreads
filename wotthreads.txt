@@ -10,7 +10,6 @@
 #prologues have chapter number 0. Epilogues are -1.
 
 ADD 1 0 "Lews Therin Thelamon"
-DEACTIVATE 1 0 "Lews Therin Thelamon"
 EVENT 1 0 Major "The creation of Dragonmount and the island of Tar Valon"
 ADD 1 1 "Rand al'Thor"
 EVENT 1 1 Summary "Rand and Tam transports cider to Emond's field. Rand and Mat independently see a black-cloaked rider."
@@ -103,3 +102,4 @@ EVENT 1 41 Minor "Identification of Mat's disease"
 EVENT 1 42 Summary "Moiraine heals Mat slightly, but says he must be taken to Tar Valon to do it properly. Mat, Rand and Perrin tells about their dreams. Hearing that the Eye of the World has been mentioned thrice from three different sources, Moiraine decides they must go there, and tells Loial to lead them into the Ways. Loial refuses."
 EVENT 1 42 Minor "Mat is partly healed"
 EVENT 1 43 Summary "Loial tells about the Ways, and Moiraine convinces everyone that they must go through them. The boys once more dreams of Ba'alzamon"
+EVENT 1 44 Summary "The crew sneaks out of the Queen's Blessing and reach a Waystone below a shop in Caemlyn. They enter the Ways and walk along them until they reach a chasm"
